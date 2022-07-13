@@ -53,7 +53,6 @@ func getBaseURL() string {
 	scanner.Scan()
 	firstLine := scanner.Text()
 
-	// baseURL := strings.TrimSuffix(string(firstLine), "\n")
 	return firstLine
 }
 
