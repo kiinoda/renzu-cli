@@ -17,10 +17,10 @@ func main() {
 	baseURL := getBaseURL()
 
 	if len(os.Args[1:]) == 0 {
-		getRenzu(baseURL + "renzu/introspect")
+		runRenzu(baseURL + "renzu/introspect")
 	} else {
 		params := strings.Join(os.Args[1:], "/")
-		getRenzu(baseURL + params)
+		runRenzu(baseURL + params)
 	}
 }
 
@@ -56,7 +56,7 @@ func getBaseURL() string {
 	return firstLine
 }
 
-func getRenzu(url string) {
+func runRenzu(url string) {
 	res, err := http.Get(url)
 
 	if err != nil {
